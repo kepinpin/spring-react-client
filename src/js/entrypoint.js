@@ -1,12 +1,15 @@
 'use strict';
 
+import style from "../css/main.css";
+
 const React = require('react');
 const ReactDOM = require('react-dom');
 const client = require('./client');
 
 const follow = require('./follow'); // function to hop multiple links by "rel"
 
-const root = '/api';
+const server_root = 'http://localhost:8090/api';
+const root = server_root; // '/api';
 
 class App extends React.Component {
 
@@ -285,7 +288,6 @@ class Employee extends React.Component {
 }
 // end::employee[]
 
-ReactDOM.render(
-	<App />,
-	document.getElementById('react')
-)
+const wrapper = document.getElementById('react');
+
+wrapper ? ReactDOM.render(<App />, wrapper) : false;

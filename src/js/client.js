@@ -1,5 +1,6 @@
 'use strict';
 
+const root = 'http://localhost:8080';
 const rest = require('rest');
 const defaultRequest = require('rest/interceptor/defaultRequest');
 const mime = require('rest/interceptor/mime');
